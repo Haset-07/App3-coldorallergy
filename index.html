@@ -49,19 +49,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-		function showresults (){
-			var total= allergy_count + cold_count;
-			var allergypercentage = (allergy_count/total) * 100;
-			var coldpercentage = (cold_count/total) * 100;
+		function showresults (){ //function i used to show results at end of questions
+			var total= allergy_count + cold_count; // total adds up the counts for cold and allergy
+			var allergypercentage = (allergy_count/total) * 100; //allergypercentage is the allergy count divided by total times 100, showing the % chance  you have allergies
+			var coldpercentage = (cold_count/total) * 100;// coldpercentage is the same except it's for colds.
 
-			var resultText = document.getElementById("resultText");
-			resultText.innerHTML = "Probability it is allergies =" + allergypercentage + "<br> Probability it is a cold =" + coldpercentage; 
+			var resultText = document.getElementById("resultText"); // looks for whatever resultText is
+			resultText.innerHTML = "Probability it is allergies =" + allergypercentage + "%" "<br> Probability it is a cold =" + coldpercentage "%"; //establishes what resultText is
 
 		}
 			
   </script>
-
-
 
 <style>	
 .body {
@@ -163,7 +161,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Results!</p> <!-- results page -->
 
 		<p id="resultText"></p>
-		<a href="#results" onclick="showresults();" class="w3-btn w3-black"> See Your Results </a>
+		<a href="#results" onclick="showresults();" class="w3-btn w3-black"> See Your Results </a> <!--makes results show up once you 
+		click the show results button-->
 		
 	</div>
 </div>	
